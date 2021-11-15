@@ -1,0 +1,523 @@
+/* Main font */
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+/* variables */
+:root {
+  --grey: #231f20;
+  --magenta: #ec008c;
+}
+
+/* Global */
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  font-size: 1rem;
+  color: var(--grey);
+  line-height: 1.75;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  padding-top: 62px;
+}
+
+label {
+  font-weight: 700;
+}
+
+a {
+  color: white;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* MAIN */
+
+main {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  background-color: var(--grey);
+}
+
+main > .container > .row {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+main > .container > .row > .about-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 5rem;
+}
+
+main > .container > .row > .about-description {
+  /* text-align: center;/ */
+  font-size: 1.2rem;
+}
+
+.about-us-title {
+  color: var(--magenta);
+}
+
+.main > .container {
+  max-width: 80%;
+}
+
+.about-title > .map {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.text-magenta {
+  color: var(--magenta);
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: var(--grey);
+}
+
+.nav-link:hover {
+  color: var(--magenta);
+}
+
+.dropdown-menu {
+  background-color: var(--grey);
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  color: var(--magenta);
+  background-color: var(--grey);
+}
+
+.logo {
+  width: min(50vw, 200px);
+}
+
+.navbar-toggler {
+  border-color: var(--magenta);
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* SLIDER */
+
+.carousel {
+  height: 85vh;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.carousel-item {
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-image: linear-gradient(
+    rgba(245, 245, 245, 0.3),
+    rgba(35, 31, 32, 1)
+  );
+
+  text-align: center;
+}
+
+.carousel-item > img {
+  width: 45%;
+  height: 100%;
+}
+
+/* .slide-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+}
+
+.slide-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/EVENT.jpg");
+}
+
+.slide-3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/KONFERENCJE.jpg");
+}
+
+.slide-4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/IMPREZY\ OKOLICZNOŚĆIOWE.jpeg");
+}
+
+.slide-5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/integ-impr.jpeg");
+}
+
+.slide-6 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/LUX.JPG");
+} */
+
+.carousel-caption {
+  bottom: initial;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.d-block {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(8%) sepia(9%) saturate(604%) hue-rotate(294deg) brightness(95%)
+    contrast(90%);
+}
+
+.carousel-caption > hr {
+  display: block;
+  bottom: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.carousel-indicators {
+  bottom: 75px;
+  cursor: pointer;
+}
+
+.carousel-caption > h3 {
+  color: #f5f5f5;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 1);
+  word-break: break-word;
+}
+
+.fa-university {
+  font-style: 5rem;
+  position: relative;
+  bottom: 20px;
+}
+
+.btn-custon {
+  padding: 0.2rem 0.4rem;
+}
+
+/* Language switcher */
+
+.container-language-switcher {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.container-language-switcher .lang-container {
+  margin: 6px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .carousel-caption > h3 {
+    font-size: 6.5vw;
+    letter-spacing: 10px;
+  }
+  .carousel-caption > p {
+    font-size: 1.5rem;
+    letter-spacing: normal;
+  }
+  .btn-custom {
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .carousel-caption > h3 {
+    font-size: 4rem;
+    letter-spacing: 17.5px;
+  }
+  .carousel-caption > p {
+    font-size: 3.5rem;
+    letter-spacing: normal;
+  }
+  .btn-custom {
+    padding: 0.675rem 1.35rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .carousel-item > img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 1281px) {
+  .carousel-partnership > .carousel-item > img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 0% 50%;
+  }
+
+  .carousel-image > .carousel-item > img {
+    width: 70%;
+    height: 150%;
+    object-fit: fill;
+  }
+
+  .carousel-caption {
+    left: 25%;
+    width: 50%;
+  }
+}
+/* O nas page */
+.about {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.about-title {
+  font-size: 5rem;
+}
+
+/* Footer */
+
+.row {
+  justify-content: space-evenly;
+}
+
+.page-footer > .footer-container {
+  padding-bottom: 2rem;
+}
+
+.page-footer .row {
+  padding-top: 4rem;
+}
+
+.page-footer {
+  color: #e5e5e5;
+  font-size: 0.75rem;
+  text-align: center;
+  background-color: var(--grey);
+  line-height: 1.75;
+}
+
+.page-footer-title > a {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--magenta);
+}
+
+.page-footer-title > a.active {
+  color: white;
+}
+
+.page-footer-title > a:hover {
+  color: white;
+}
+
+@media (max-width: 991px) {
+  .row.d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-md-6 {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-title {
+    font-size: 4rem;
+  }
+
+  .page-footer {
+    text-align: center;
+  }
+
+  .page-footer .row {
+    padding-left: initial;
+    padding-right: initial;
+  }
+
+  .page-footer-title {
+    position: relative;
+  }
+}
+
+@media (min-width: 576px) {
+  .carousel-caption > h1 {
+    font-size: 4.5rem;
+    letter-spacing: 10px;
+  }
+  .carousel-caption > p {
+    font-size: 1.5rem;
+    letter-spacing: normal;
+  }
+  .btn-custom {
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* CONTACT PAGE */
+
+/* 
+ * CONTACT
+ */
+
+.contact-directions {
+  text-align: center;
+  margin-top: 3.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  max-width: 50em;
+}
+
+.contact-directions > dl > dt:nth-child(3) {
+  margin-top: 2rem;
+}
+
+.contact-horizontal-rule {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contact-information {
+  max-width: 50em;
+  margin-top: 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.contact-form ::placeholder {
+  color: white !important;
+}
+
+.contact-form label {
+  color: white;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: none !important;
+  border: 3px solid var(--magenta) !important;
+}
+
+.bg-grey {
+  background-color: var(--grey);
+}
+
+.contact-details {
+  border: none;
+  margin-top: 2rem;
+  color: white;
+}
+
+.send-btn {
+  background-color: var(--magenta);
+  border-color: var(--magenta);
+}
+
+.connect {
+  font-size: 1.8rem;
+}
+
+.connect > a:hover {
+  color: var(--magenta);
+}
+
+.contact-details h6 {
+  font-weight: 700;
+}
+
+.special-title-1 {
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+  font-weight: 700;
+  color: #007bff;
+}
+
+.special-title-2 {
+  font-family: "Great Vibes", cursive;
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  color: white;
+}
+
+.content {
+  text-align: justify;
+}
+
+.about-description {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem 5rem;
+}
+
+@media (max-width: 575px) {
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .about-description {
+    padding: 5rem 0.5rem;
+  }
+
+  main > .container > .row > .about-title {
+    font-size: 15vw;
+    padding: 0 1rem;
+  }
+}

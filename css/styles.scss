@@ -1,0 +1,676 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+// Variables
+$grey: #231f20;
+$magenta: #ec008c;
+
+// Breakpoints for media queries
+$breakpoint-wide: 1800px;
+$breakpoint-desktop: 1281px;
+$breakpoint-laptop: 1025px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 481px;
+$breakpoint-smartphone: 320px;
+
+// GLOBAL
+html {
+  font-size: 10px;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1rem;
+  color: $grey;
+  line-height: 1.75;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+a {
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.row {
+  justify-content: space-evenly;
+}
+
+.text-magenta {
+  color: $magenta;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.border-magenta {
+  border: 3px solid $magenta;
+}
+
+// Navbar
+
+.navbar {
+  background-color: $grey;
+  font-size: 1.6rem;
+
+  .navbar-collapse {
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: calc(min(50vw, 200px));
+
+    &:focus {
+      border: none;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: $magenta;
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+  }
+
+  .nav-link {
+    margin: 1rem 0.75rem;
+  }
+
+  .nav-link:hover {
+    color: $magenta;
+  }
+
+  .dropdown-menu {
+    background-color: $grey;
+    font-size: 1.6rem;
+
+    .dropdown-item {
+      color: white;
+
+      &:hover {
+        color: $magenta;
+        background-color: $grey;
+      }
+    }
+  }
+
+  .container-language-switcher {
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    .lang-container {
+      margin: 0.6rem;
+    }
+  }
+}
+
+// Slider
+
+.carousel {
+  height: 100vh;
+
+  .carousel-indicators {
+    bottom: 7.5rem;
+    cursor: pointer;
+  }
+
+  .carousel-inner {
+    height: 100vh;
+    background-image: linear-gradient(
+      rgba(245, 245, 245, 0.5),
+      rgba(35, 31, 32, 1)
+    );
+
+    // &.carousel-partnership {
+    //   .carousel-item {
+    //     img {
+    //       width: 75%;
+    //       object-fit: cover;
+    //       object-position: 50% 50%;
+    //     }
+    //   }
+    // }
+    .carousel-item {
+      margin: 0 auto;
+
+      height: 95vh;
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      width: 80%;
+      object-fit: contain;
+
+      .carousel-caption {
+        bottom: initial;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+
+        h3 {
+          color: #f5f5f5;
+          font-family: "Josefin Sans", sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1rem;
+          margin-bottom: 0;
+          font-size: 6rem;
+          text-shadow: 2px 4px 3px rgba(0, 0, 0, 1);
+          word-break: break-word;
+        }
+      }
+    }
+
+    // add images to slides
+    .slide-1 {
+      &.main {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/PODRÓŻE SŁUŻBOWE.JPG");
+      }
+
+      &.mice {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/MICE/MICE0.JPG");
+      }
+
+      &.tablice {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/Wypisane tablice/wypisanetablice1.jpg");
+      }
+
+      &.warzone {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/WARZONE CAFE/WARZONE.JPG");
+      }
+
+      &.partnership {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Współpraca/WSPÓŁPRACA.JPG");
+      }
+
+      &.business-travels {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/Business-travels/img-1.jpg");
+      }
+    }
+
+    .slide-2 {
+      &.main {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/EVENT.jpg");
+      }
+
+      &.mice {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/MICE/MICE1.jpeg");
+      }
+
+      &.tablice {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/Wypisane tablice/wypisanetablice2.jpg");
+      }
+
+      &.warzone {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/WARZONE CAFE/WARZONE2.JPG");
+        background-position: 50% -10%;
+      }
+
+      &.partnership {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Współpraca/WSPÓŁPRACA2.jpg");
+      }
+
+      &.business-travels {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/Business-travels/img-2.jpg");
+        background-position: 50% 25%;
+      }
+    }
+
+    .slide-3 {
+      &.main {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/KONFERENCJE.jpg");
+      }
+
+      &.mice {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/MICE/MICE2-cut.jpg");
+      }
+
+      &.tablice {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/Wypisane tablice/wypisanetablice3.jpg");
+      }
+
+      &.warzone {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/WARZONE CAFE/WARZONE3.JPG");
+      }
+
+      &.business-travels {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/Business-travels/img-3.jpeg");
+      }
+    }
+
+    .slide-4 {
+      &.main {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/IMPREZY OKOLICZNOŚĆIOWE.jpeg");
+      }
+
+      &.mice {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/MICE/MICE3.JPG");
+      }
+
+      &.business-travels {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/Business-travels/img-4.jpg");
+      }
+    }
+
+    .slide-5 {
+      &.main {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/integ-impr.jpeg");
+      }
+
+      &.mice {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/Usługi/MICE/MICE4-cut.jpg");
+      }
+    }
+
+    .slide-6 {
+      &.main {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+          ),
+          url("../images/LUX.JPG");
+      }
+    }
+  }
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    filter: invert(8%) sepia(9%) saturate(604%) hue-rotate(294deg)
+      brightness(95%) contrast(90%);
+  }
+}
+
+// Main Section
+
+main {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $grey;
+
+  .about {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+    text-align: justify;
+
+    .about-us-title {
+      font-size: 8rem;
+      color: $magenta;
+    }
+
+    .about-description {
+      color: white;
+      font-size: 1.8rem;
+    }
+  }
+
+  .container {
+    position: relative;
+    max-width: 80%;
+
+    .map {
+      position: absolute;
+      padding: 5rem;
+      opacity: 0.075;
+      width: 100%;
+      height: 100vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .row {
+      min-width: 100%;
+      min-height: 100%;
+
+      .about-title {
+        display: flex;
+        flex-direction: column;
+        font-size: 5rem;
+      }
+
+      .about-description {
+        z-index: 2;
+
+        p {
+          border: 3px solid $magenta;
+          padding: 3rem;
+        }
+      }
+    }
+  }
+}
+
+// Footer
+
+.page-footer {
+  color: #e5e5e5;
+  text-align: center;
+  background-color: $grey;
+  line-height: 1.75;
+  padding-top: 3rem;
+
+  .footer-container {
+    padding-bottom: 2rem;
+
+    .row {
+      padding-top: 4rem;
+
+      .page-footer-title {
+        a {
+          font-weight: 700;
+          margin-bottom: 1rem;
+          color: $magenta;
+          font-size: 2rem;
+
+          &.active {
+            color: white;
+          }
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Contact page
+.contact-information {
+  width: 100rem;
+  margin-top: 0;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
+  .special-title {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+
+    &.special-title-2 {
+      font-size: 4rem;
+      color: $magenta;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .contact-form {
+    font-size: 1.8rem;
+
+    label {
+      color: white;
+    }
+
+    input,
+    textarea {
+      background: none !important;
+      border: 3px solid $magenta !important;
+      font-size: 1.8rem;
+      padding: 1rem 0.5rem;
+
+      &::placeholder {
+        color: white !important;
+      }
+    }
+
+    .send-btn {
+      background-color: $magenta;
+      border-color: $magenta;
+      font-size: 1.8rem;
+      padding: 1rem 1rem;
+    }
+  }
+
+  .contact-details {
+    border: none;
+    margin-top: 4rem;
+    color: white;
+    font-size: 2rem;
+
+    h6 {
+      font-weight: 700;
+    }
+  }
+}
+
+.connect {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  font-size: 4rem;
+
+  a:hover {
+    color: $magenta;
+  }
+}
+
+// Media queries
+// max: 1800px
+@media (max-width: $breakpoint-wide) {
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//  max: 1281px
+@media (max-width: $breakpoint-desktop) {
+  main {
+    .container {
+      .row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+
+        div {
+          max-width: 100%;
+        }
+      }
+
+      .map {
+        width: 100vw;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  html {
+    font-size: 8px;
+  }
+
+  .carousel {
+    .carousel-inner {
+      .carousel-item {
+        .carousel-caption {
+          h3 {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .container {
+      max-width: 90%;
+      .map {
+        height: auto;
+      }
+    }
+  }
+
+  .page-footer {
+    .footer-container {
+      .row {
+        padding-top: 0;
+        align-items: center;
+        justify-content: space-around;
+        .col-md-3 {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  html {
+    font-size: 6.5px;
+  }
+
+  .carousel {
+    height: auto;
+    .carousel-inner {
+      height: auto;
+
+      .carousel-item {
+        .carousel-caption {
+          h3 {
+            font-size: 3.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .container {
+      max-width: 100%;
+
+      .map {
+        height: auto;
+      }
+    }
+  }
+
+  .page-footer {
+    .footer-container {
+      .row {
+        .col-md-3 {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-smartphone) {
+  html {
+    font-size: 5px;
+  }
+}
